@@ -49,7 +49,7 @@ class MorphManager {
 	}
 	
 	public function createNbt($x, $y, $z, $yaw, $pitch) {
-		 $nbt = new Compound;
+		 $nbt = new pocketmine\nbt\tag\Compound;
 		
 		 $nbt->Pos = new Enum("Pos", [
 			new Double("", $x),
