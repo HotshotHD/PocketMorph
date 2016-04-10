@@ -28,7 +28,7 @@ class EventListener implements Listener {
 		if($this->getPlugin()->getMorphManager()->isMorphed($player)) {
 			$morph = $this->getPlugin()->getMorphManager()->getMorph($player);
 			
-		  $morph->close();
+			 $morph->close();
 		}
 	}
 	
@@ -43,4 +43,4 @@ class EventListener implements Listener {
 		}
 	}
 	
-	}
+}
