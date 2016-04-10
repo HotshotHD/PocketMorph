@@ -2,12 +2,11 @@
 
 namespace pocketmorph\morph;
 
-use pocketmine\entity\Entity;
 use pocketmine\nbt\tag\Int;
 use pocketmine\network\protocol\AddEntityPacket;
 use pocketmine\Player;
 
-class MorphZombieVillager extends Entity implements MorphEntity
+class MorphZombieVillager extends Morph implements MorphEntity
 {
 
     const NETWORK_ID = 44;

@@ -1,11 +1,10 @@
 <?php
 namespace pocketmorph\morph;
 
-use pocketmine\entity\Entity;
 use pocketmine\network\protocol\AddEntityPacket;
 use pocketmine\Player;
 
-class MorphZombie extends Entity implements MorphEntity
+class MorphZombie extends Morph implements MorphEntity
 {
 
     const NETWORK_ID = 32;

@@ -31,8 +31,7 @@ class MorphManager {
 		$chunk = $player->getLevel()->getChunk($player->x>>4, $player->z>>4);
 		
 		$player->getLevel()->addEntityMovement(
-		$chunk->getX(),
-		$chunk->getZ(),
+		$chunk->getX(), $chunk->getZ(),
 		$entityId,
 		$player->x, $player->y, $player->z,
 		$player->yaw, $player->pitch
@@ -70,23 +69,26 @@ class MorphManager {
 	}
 	
 	public function removeMorph(Player $player) {
-		$pk = new AddPlayerPacket();
-		
-		$pk->eid = $player->getId();
-		$pk->x = $player->x;
-		$pk->y = $player->y;
-		$pk->z = $player->z;
-		$pk->yaw = $player->yaw;
-		$pk->pitch = $player->pitch;
-		$pk->username = $player->getName();
-		
-		foreach(Server::getInstance()->getOnlinePlayers() as $p) {
-			if(!$p->canSee($player)) {
-				$p->dataPacket($pk);
+		if($this->isMorphed($player)) {
+			$pk = new AddPlayerPacket();
+			
+			$pk->eid = $player->getId();
+			$pk->x = $player->x;
+			$pk->y = $player->y;
+			$pk->z = $player->z;
+			$pk->yaw = $player->yaw;
+			$pk->pitch = $player->pitch;
+			$pk->username = $player->getName();
+			
+			foreach(Server::getInstance()->getOnlinePlayers() as $p) {
+				if(!$p->canSee($player)) {
+					$p->dataPacket($pk);
 				}
+			}
+	
+			$this->getMorph($player)->close();
+			unset($this->plugin->morphs[$player->getName()]);
 		}
-		
-		$this->getMorph($player)->close();
 		
 	}
 	
@@ -99,7 +101,7 @@ class MorphManager {
 			}
 		}
 		$this->plugin->morphs[$player->getName()] = $entity->getId();
-		$entity->setNameTag($player->getName());
+		$entity->setNameTag($player->getNameTag());
 		
 		$pk = new RemovePlayerPacket();
 		$pk->eid = $player->getId();
@@ -115,13 +117,17 @@ class MorphManager {
 	
 	public function getMorph(Player $player) {
 		$id = $this->plugin->morphs[$player->getName()];
+		$entity = $player->getLevel()->getEntity($id);
+
+		if($entity !== null) {
+			return $entity;
+		}
 		
-		return $player->getLevel()->getEntity($id);
 	}
 	 
 	public function isMorphed(Player $player) {
 		 return isset($this->plugin->morphs[$player->getName()]);
 	}
 	
-	} 
+} 
 	
