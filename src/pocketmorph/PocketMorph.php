@@ -67,11 +67,11 @@ class PocketMorph extends PluginBase {
         Entity::registerEntity(MorphEnderman::class, true);
         Entity::registerEntity(MorphCaveSpider::class, true);
 
-		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+	$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
-		$cmds = new Commands($this);
+	        $cmds = new Commands($this);
 		
 		$cmds->onCommand($sender,$cmd, $label,$args);
 	}
