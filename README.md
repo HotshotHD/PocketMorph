@@ -17,3 +17,6 @@ Permissions:
 - morph.command: Allows using all PocketMorph commands
 
 When transformed, your character will appear as the specified mob to OTHER players, you will not be able to see yourself as the mob. Hope you enjoy this plugin. Please report issues and/or suggestions!
+
+#NOTE
+This plugin may not work for you if you are using php7. If you are using php7, please update the plugin using this tool by @PEMapModder: http://pmt.mcpe.me/api2/
