@@ -87,6 +87,7 @@ class MorphManager {
 			}
 	
 			$this->getMorph($player)->close();
+			unset($this->plugin->morphs[$player->getName()]);
 		}
 		
 	}
