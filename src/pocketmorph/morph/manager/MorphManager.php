@@ -5,7 +5,7 @@ namespace pocketmorph\morph\manager;
 use pocketmine\Player;
 use pocketmine\entity\Entity;
 use pocketmine\nbt\tag\ByteTag;
-use pocketmine\nbt\tag\Compound;
+use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\DoubleTag;
 use pocketmine\nbt\tag\Enum;
 use pocketmine\nbt\tag\FloatTag;
