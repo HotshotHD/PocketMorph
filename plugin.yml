@@ -1,0 +1,15 @@
+name: PocketMorph
+author: HotshotHD
+version: 1.0.0
+description: Morph into your favourite mobs!
+main: pocketmorph\PocketMorph
+api: [1.13.0, 2.0.0]
+commands:
+  morph:
+    description: Transform into a mob
+    permission: morph.command
+
+permissions:
+  morph.command:
+    description: Allows using all PocketMorph commands
+    default: op
