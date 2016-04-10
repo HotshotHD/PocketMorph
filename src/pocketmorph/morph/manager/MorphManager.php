@@ -85,7 +85,9 @@ class MorphManager {
 			}
 		}
 		
-		$this->getMorph($player)->close();
+		if($this->isMorphed($player)) {
+			$this->getMorph($player)->close();
+		}
 		
 	}
 	
