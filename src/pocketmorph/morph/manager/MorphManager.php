@@ -83,7 +83,7 @@ class MorphManager {
 		foreach(Server::getInstance()->getOnlinePlayers() as $p) {
 			if(!$p->canSee($player)) {
 				$p->dataPacket($pk);
-				}
+			}
 		}
 		
 		$this->getMorph($player)->close();
@@ -123,5 +123,5 @@ class MorphManager {
 		 return isset($this->plugin->morphs[$player->getName()]);
 	}
 	
-	} 
+} 
 	
