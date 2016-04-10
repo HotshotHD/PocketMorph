@@ -41,7 +41,7 @@ class PocketMorph extends PluginBase {
 	
 	public function onEnable() {	
 		     
-		Entity::registerEntity(MorphCreeper::class, true);
+	Entity::registerEntity(MorphCreeper::class, true);
         Entity::registerEntity(MorphBat::class, true);
         Entity::registerEntity(MorphSheep::class, true);
         Entity::registerEntity(MorphPigZombie::class, true);
