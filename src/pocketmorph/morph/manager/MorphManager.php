@@ -101,7 +101,11 @@ class MorphManager {
 			}
 		}
 		$this->plugin->morphs[$player->getName()] = $entity->getId();
+<<<<<<< HEAD
 		$entity->setNameTag($player->getNameTag());
+=======
+		$entity->setNameTag($player->getDisplayName());
+>>>>>>> origin/master
 		
 		$pk = new RemovePlayerPacket();
 		$pk->eid = $player->getId();
@@ -118,9 +122,17 @@ class MorphManager {
 	public function getMorph(Player $player) {
 		$id = $this->plugin->morphs[$player->getName()];
 		$entity = $player->getLevel()->getEntity($id);
+<<<<<<< HEAD
 
 		return $entity;
 		
+=======
+		
+		if($entity !== null) {
+			return $entity;
+
+		}
+>>>>>>> origin/master
 	}
 	 
 	public function isMorphed(Player $player) {

@@ -47,5 +47,8 @@ class EventListener implements Listener {
 			$this->getPlugin()->getMorphManager()->moveEntity($player, $morph->getId());
 		}
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 }

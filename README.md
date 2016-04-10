@@ -5,7 +5,7 @@ Tired of being a boring old human? Well great! This plugin is just for you.
 
 Commands:
 
-- /morph <entity>: Transforms you into a specified entity/mob
+- /morph [entity]: Transforms you into a specified entity/mob
 
 - /morph help: Shows a list of PocketMorph commands
 
