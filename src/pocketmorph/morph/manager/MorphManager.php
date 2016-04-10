@@ -101,7 +101,7 @@ class MorphManager {
 			}
 		}
 		$this->plugin->morphs[$player->getName()] = $entity->getId();
-		$entity->setNameTag($player->getName());
+		$entity->setNameTag($player->getDisplayName());
 		
 		$pk = new RemovePlayerPacket();
 		$pk->eid = $player->getId();
