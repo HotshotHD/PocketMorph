@@ -26,9 +26,7 @@ class EventListener implements Listener {
 		$player = $event->getPlayer();
 		
 		if($this->getPlugin()->getMorphManager()->isMorphed($player)) {
-			$morph = $this->getPlugin()->getMorphManager()->getMorph($player);
-			
-		 	$morph->close();
+			$this->getPlugin()->getMorphManager()->removeMorph($player);
 		}
 	}
 	
@@ -42,5 +40,4 @@ class EventListener implements Listener {
 			$this->getPlugin()->getMorphManager()->moveEntity($player, $morph->getId());
 		}
 	}
-	
 }
