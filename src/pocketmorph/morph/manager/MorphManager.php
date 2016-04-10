@@ -120,7 +120,7 @@ class MorphManager {
 	}
 	 
 	public function isMorphed(Player $player) {
-	  return isset($this->plugin->morphs[$player->getName()]);
+		 return isset($this->plugin->morphs[$player->getName()]);
 	}
 	
 	} 
