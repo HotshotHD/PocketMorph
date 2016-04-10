@@ -41,33 +41,33 @@ class PocketMorph extends PluginBase {
 	
 	public function onEnable() {	
 		     
-	Entity::registerEntity(MorphCreeper::class, true);
-        Entity::registerEntity(MorphBat::class, true);
-        Entity::registerEntity(MorphSheep::class, true);
-        Entity::registerEntity(MorphPigZombie::class, true);
-        Entity::registerEntity(MorphGhast::class, true);
-        Entity::registerEntity(MorphBlaze::class, true);
-        Entity::registerEntity(MorphIronGolem::class, true);
-        Entity::registerEntity(MorphSnowman::class, true);
-        Entity::registerEntity(MorphOcelot::class, true);
-        Entity::registerEntity(MorphZombieVillager::class, true);
-        Entity::registerEntity(MorphVillager::class, true);
-        Entity::registerEntity(MorphZombie::class, true);
-        Entity::registerEntity(MorphSquid::class, true);
-        Entity::registerEntity(MorphCow::class, true);
-        Entity::registerEntity(MorphSpider::class, true);
-        Entity::registerEntity(MorphPig::class, true);
-        Entity::registerEntity(MorphMooshroom::class, true);
-        Entity::registerEntity(MorphWolf::class, true);
-        Entity::registerEntity(MorphMagmaCube::class, true);
-        Entity::registerEntity(MorphSilverfish::class, true);
-        Entity::registerEntity(MorphSkeleton::class, true);
-        Entity::registerEntity(MorphSlime::class, true);
-        Entity::registerEntity(MorphChicken::class, true);
-        Entity::registerEntity(MorphEnderman::class, true);
-        Entity::registerEntity(MorphCaveSpider::class, true);
+		Entity::registerEntity(MorphCreeper::class, true);
+	        Entity::registerEntity(MorphBat::class, true);
+	        Entity::registerEntity(MorphSheep::class, true);
+	        Entity::registerEntity(MorphPigZombie::class, true);
+	        Entity::registerEntity(MorphGhast::class, true);
+	        Entity::registerEntity(MorphBlaze::class, true);
+	        Entity::registerEntity(MorphIronGolem::class, true);
+	        Entity::registerEntity(MorphSnowman::class, true);
+	        Entity::registerEntity(MorphOcelot::class, true);
+	        Entity::registerEntity(MorphZombieVillager::class, true);
+	        Entity::registerEntity(MorphVillager::class, true);
+	        Entity::registerEntity(MorphZombie::class, true);
+	        Entity::registerEntity(MorphSquid::class, true);
+	        Entity::registerEntity(MorphCow::class, true);
+	        Entity::registerEntity(MorphSpider::class, true);
+	        Entity::registerEntity(MorphPig::class, true);
+	        Entity::registerEntity(MorphMooshroom::class, true);
+	        Entity::registerEntity(MorphWolf::class, true);
+	        Entity::registerEntity(MorphMagmaCube::class, true);
+	        Entity::registerEntity(MorphSilverfish::class, true);
+	        Entity::registerEntity(MorphSkeleton::class, true);
+	        Entity::registerEntity(MorphSlime::class, true);
+	        Entity::registerEntity(MorphChicken::class, true);
+	        Entity::registerEntity(MorphEnderman::class, true);
+        	Entity::registerEntity(MorphCaveSpider::class, true);
 
-	$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
@@ -82,4 +82,4 @@ class PocketMorph extends PluginBase {
 	}
 	
 	
-	}
+}
