@@ -69,23 +69,23 @@ class MorphManager {
 	}
 	
 	public function removeMorph(Player $player) {
-		$pk = new AddPlayerPacket();
-		
-		$pk->eid = $player->getId();
-		$pk->x = $player->x;
-		$pk->y = $player->y;
-		$pk->z = $player->z;
-		$pk->yaw = $player->yaw;
-		$pk->pitch = $player->pitch;
-		$pk->username = $player->getName();
-		
-		foreach(Server::getInstance()->getOnlinePlayers() as $p) {
-			if(!$p->canSee($player)) {
-				$p->dataPacket($pk);
-			}
-		}
-		
 		if($this->isMorphed($player)) {
+			$pk = new AddPlayerPacket();
+			
+			$pk->eid = $player->getId();
+			$pk->x = $player->x;
+			$pk->y = $player->y;
+			$pk->z = $player->z;
+			$pk->yaw = $player->yaw;
+			$pk->pitch = $player->pitch;
+			$pk->username = $player->getName();
+			
+			foreach(Server::getInstance()->getOnlinePlayers() as $p) {
+				if(!$p->canSee($player)) {
+					$p->dataPacket($pk);
+				}
+			}
+	
 			$this->getMorph($player)->close();
 		}
 		
