@@ -35,7 +35,6 @@ class Commands {
 		 "Silverfish",
 		 "Villager",
 		 "Zombie",
-		 "Human",
 		 "Player",
 		 "Squid",
 		 "Bat",
