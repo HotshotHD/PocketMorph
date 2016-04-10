@@ -5,13 +5,13 @@ Tired of being a boring old human? Well great! This plugin is just for you.
 
 Commands:
 
--/morph : Transforms you into a specified entity/mob
+- /morph : Transforms you into a specified entity/mob
 
--/morph help: Shows a list of PocketMorph commands
+- /morph help: Shows a list of PocketMorph commands
 
--/morph list: Shows a list of available mobs you can transform into
+- /morph list: Shows a list of available mobs you can transform into
 
--/morph remove: Removes your current morph, and turns you back to human
+- /morph remove: Removes your current morph, and turns you back to human
 
 Permissions:
 - morph.command: Allows using all PocketMorph commands
