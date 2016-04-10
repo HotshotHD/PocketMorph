@@ -52,21 +52,21 @@ class MorphManager {
 	public function createNbt($x, $y, $z, $yaw, $pitch) {
 		 $nbt = new Compound;
 		
-    $nbt->Pos = new Enum("Pos", [
-				new Double("", $x),
-      	new Double("", $y),
-      	new Double("", $z)
-       ]);
+		 $nbt->Pos = new Enum("Pos", [
+			new Double("", $x),
+      			new Double("", $y),
+      			new Double("", $z)
+       		]);
 
-    $nbt->Rotation = new Enum("Rotation", [
-    		new Float("", $yaw),
-    	 	new Float("", $pitch)
-       ]);
+    		$nbt->Rotation = new Enum("Rotation", [
+    			new Float("", $yaw),
+    	 		new Float("", $pitch)
+       		]);
 
-     $nbt->Health = new Short("Health", 1);
-     $nbt->Invulnerable = new Byte("Invulnerable", 1);
+     		$nbt->Health = new Short("Health", 1);
+     		$nbt->Invulnerable = new Byte("Invulnerable", 1);
 
-     return $nbt;
+     		return $nbt;
 	}
 	
 	public function removeMorph(Player $player) {
