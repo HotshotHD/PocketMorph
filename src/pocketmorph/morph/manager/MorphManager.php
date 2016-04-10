@@ -116,8 +116,11 @@ class MorphManager {
 	
 	public function getMorph(Player $player) {
 		$id = $this->plugin->morphs[$player->getName()];
+		$entity = $player->getLevel()->getEntity($id);
 		
-		return $player->getLevel()->getEntity($id);
+		if($entity !== null) {
+			return $entity;
+		}
 	}
 	 
 	public function isMorphed(Player $player) {
