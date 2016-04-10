@@ -93,7 +93,7 @@ class MorphManager {
 	public function setMorph(Player $player, $morph) {
 		$entity = Entity::createEntity($morph, $player->getLevel()->getChunk($player->x >> 4, $player->z >> 4), $this->createNbt($player->x, $player->y, $player->z, $player->yaw, $player->pitch));
    	
-	    foreach(Server::getInstance()->getOnlinePlayers() as $p) {
+	    	foreach(Server::getInstance()->getOnlinePlayers() as $p) {
 			if($p->getName() !== $player->getName()) {
 				$entity->spawnTo($p);
 			}
