@@ -31,8 +31,7 @@ class MorphManager {
 		$chunk = $player->getLevel()->getChunk($player->x>>4, $player->z>>4);
 		
 		$player->getLevel()->addEntityMovement(
-		$chunk->getX(),
-		$chunk->getZ(),
+		$chunk->getX(), $chunk->getZ(),
 		$entityId,
 		$player->x, $player->y, $player->z,
 		$player->yaw, $player->pitch
