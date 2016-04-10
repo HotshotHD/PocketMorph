@@ -13,7 +13,7 @@ class MorphPig extends Entity implements MorphEntity
 
     public function getName()
     {
-        return $this->getDataProperty(2);
+        return "Pig";
     }
 
     public function spawnTo(Player $player)
@@ -28,11 +28,10 @@ class MorphPig extends Entity implements MorphEntity
         $pk->yaw = $this->yaw;
         $pk->pitch = $this->pitch;
         $pk->metadata = [
-            2 => [4, str_ireplace("{name}", $player->getName(), str_ireplace("{display_name}", $player->getDisplayName(), $player->hasPermission("slapper.seeId") ? $this->getDataProperty(2) . "\n" . \pocketmine\utils\TextFormat::GREEN . "Entity ID: " . $this->getId() : $this->getDataProperty(2)))],
             3 => [0, $this->getDataProperty(3)],
             15 => [0, 1]
-        ];
-        $player->dataPacket($pk);
+        ];   
+		$player->dataPacket($pk);
         parent::spawnTo($player);
     }
 
