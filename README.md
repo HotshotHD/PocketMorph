@@ -1,4 +1,6 @@
 #PocketMorph
+Please ask me for permission before forking/copying this plugin. Thanks.
+
 Transform into any mob with this PocketMine plugin!
 
 Tired of being a boring old human? Well great! This plugin is just for you.
