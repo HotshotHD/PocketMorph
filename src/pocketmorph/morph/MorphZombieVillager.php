@@ -2,7 +2,7 @@
 
 namespace pocketmorph\morph;
 
-use pocketmine\nbt\tag\Int;
+use pocketmine\nbt\tag\IntTag;
 use pocketmine\network\protocol\AddEntityPacket;
 use pocketmine\Player;
 
