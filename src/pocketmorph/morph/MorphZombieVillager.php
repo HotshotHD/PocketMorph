@@ -2,7 +2,6 @@
 
 namespace pocketmorph\morph;
 
-use pocketmine\nbt\tag\Int;
 use pocketmine\network\protocol\AddEntityPacket;
 use pocketmine\Player;
 
@@ -30,7 +29,7 @@ class MorphZombieVillager extends Morph implements MorphEntity
             3 => [0, $this->getDataProperty(3)],
             15 => [0, 1]
         ];      
-		$player->dataPacket($pk);
+	$player->dataPacket($pk);
         parent::spawnTo($player);
     }
 
