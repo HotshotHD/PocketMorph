@@ -4,14 +4,14 @@ namespace pocketmorph\morph\manager;
 
 use pocketmine\Player;
 use pocketmine\entity\Entity;
-use pocketmine\nbt\tag\Byte;
-use pocketmine\nbt\tag\Compound;
-use pocketmine\nbt\tag\Double;
-use pocketmine\nbt\tag\Enum;
-use pocketmine\nbt\tag\Float;
-use pocketmine\nbt\tag\Int;
-use pocketmine\nbt\tag\Short;
-use pocketmine\nbt\tag\String;
+use pocketmine\nbt\tag\ByteTag;
+use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\nbt\tag\DoubleTag;
+use pocketmine\nbt\tag\EnumTag;
+use pocketmine\nbt\tag\FloatTag;
+use pocketmine\nbt\tag\IntTag;
+use pocketmine\nbt\tag\ShortTag;
+use pocketmine\nbt\tag\StringTag;
 use pocketmine\network\protocol\RemovePlayerPacket;
 use pocketmine\network\protocol\AddPlayerPacket;
 use pocketmorph\PocketMorph;
@@ -49,21 +49,21 @@ class MorphManager {
 	}
 	
 	public function createNbt($x, $y, $z, $yaw, $pitch) {
-		 $nbt = new Compound;
+		 $nbt = new CompoundTag;
 		
-		 $nbt->Pos = new Enum("Pos", [
-			new Double("", $x),
-      			new Double("", $y),
-      			new Double("", $z)
+		 $nbt->Pos = new EnumTag("Pos", [
+			new DoubleTag("", $x),
+      			new DoubleTag("", $y),
+      			new DoubleTag("", $z)
        		]);
 
-    		$nbt->Rotation = new Enum("Rotation", [
-    			new Float("", $yaw),
-    	 		new Float("", $pitch)
+    		$nbt->Rotation = new EnumTag("Rotation", [
+    			new FloatTag("", $yaw),
+    	 		new FloatTag("", $pitch)
        		]);
 
-     		$nbt->Health = new Short("Health", 1);
-     		$nbt->Invulnerable = new Byte("Invulnerable", 1);
+     		$nbt->Health = new ShortTag("Health", 1);
+     		$nbt->Invulnerable = new ByteTag("Invulnerable", 1);
 
      		return $nbt;
 	}
