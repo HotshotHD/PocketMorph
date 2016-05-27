@@ -7,7 +7,7 @@ use pocketmine\entity\Entity;
 use pocketmine\nbt\tag\ByteTag;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\DoubleTag;
-use pocketmine\nbt\tag\EnumTag;
+use pocketmine\nbt\tag\EndTag;
 use pocketmine\nbt\tag\FloatTag;
 use pocketmine\nbt\tag\IntTag;
 use pocketmine\nbt\tag\ShortTag;
@@ -51,13 +51,13 @@ class MorphManager {
 	public function createNbt($x, $y, $z, $yaw, $pitch) {
 		 $nbt = new CompoundTag;
 		
-		 $nbt->Pos = new EnumTag("Pos", [
+		 $nbt->Pos = new EndTag("Pos", [
 			new DoubleTag("", $x),
       			new DoubleTag("", $y),
       			new DoubleTag("", $z)
        		]);
 
-    		$nbt->Rotation = new EnumTag("Rotation", [
+    		$nbt->Rotation = new EndTag("Rotation", [
     			new FloatTag("", $yaw),
     	 		new FloatTag("", $pitch)
        		]);
