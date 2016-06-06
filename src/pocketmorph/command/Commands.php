@@ -52,21 +52,21 @@ class Commands {
 				
 				if(count($args) > 0) {
 					if(!isset($args[0])) {
-						$sender->sendMessage(TextFormat::YELLOW . "Type '/morph help' for a list of commands");
+						$sender->sendMessage(TextFormat::GREEN . "Type '/morph help' for a list of commands");
 					} else {						
 						if(strtolower($args[0]) == "list") {
-							$sender->sendMessage(TextFormat::YELLOW . "Entities: " . implode(',', $types));
+							$sender->sendMessage(TextFormat::GREEN . "Entities: " . implode(',', $types));
 						}
 						
 						if(strtolower($args[0]) == "remove") {
 							if($this->getPlugin()->getMorphManager()->isMorphed($sender)) {
-								$sender->sendMessage(TextFormat::YELLOW . "Morph removed");
+								$sender->sendMessage(TextFormat::GREEN . "Morph removed");
 								$this->getPlugin()->getMorphManager()->removeMorph($sender); 
 							}
 						}
 						
 						if(strtolower($args[0]) == "help") {
-							$sender->sendMessage(TextFormat::YELLOW . "PocketMorph help\n- /morph help\n- /morph remove\n- /morph <entity>\n- /morph list");
+							$sender->sendMessage(TextFormat::GREEN . "PocketMorph help\n- /morph help\n- /morph remove\n- /morph <entity>\n- /morph list");
 						}
 						
 						foreach ($types as $type) {								 
@@ -75,10 +75,10 @@ class Commands {
 								if($this->getPlugin()->getMorphManager()->isMorphed($sender)) {
 									$this->getPlugin()->getMorphManager()->removeMorph($sender); 
 									$this->getPlugin()->getMorphManager()->setMorph($sender, $typeStr);
-									$sender->sendMessage(TextFormat::YELLOW . "You morphed into a " . $args[0]);
+									$sender->sendMessage(TextFormat::GREEN . "You morphed into a " . $args[0]);
 								 } else {
 									$this->getPlugin()->getMorphManager()->setMorph($sender, $typeStr);
-									$sender->sendMessage(TextFormat::YELLOW . "You morphed into a " . $args[0]);									 
+									$sender->sendMessage(TextFormat::GREEN . "You morphed into a " . $args[0]);									 
 								 }
 							 } 
 						}
