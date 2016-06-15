@@ -1,5 +1,4 @@
 #PocketMorph
-#Please ask me(@HotshotHD) for permission before forking/copying this plugin. Thanks.
 
 Transform into any mob with this PocketMine plugin!
 
