@@ -12,7 +12,7 @@ use pocketmine\nbt\tag\FloatTag;
 use pocketmine\nbt\tag\IntTag;
 use pocketmine\nbt\tag\ShortTag;
 use pocketmine\nbt\tag\StringTag;
-use pocketmine\network\protocol\RemovePlayerPacket;
+use pocketmine\network\protocol\RemoveEntityPacket;
 use pocketmine\network\protocol\AddPlayerPacket;
 use pocketmorph\PocketMorph;
 use pocketmine\Server;
@@ -37,9 +37,8 @@ class MorphManager {
 		$player->yaw, $player->pitch
 		);
 		
-		$pk = new RemovePlayerPacket();
+		$pk = new RemoveEntityPacket();
 		$pk->eid = $player->getId();
-		$pk->clientId = UUID::fromData($player->getId(), $player->getName());
 		
 		foreach(Server::getInstance()->getOnlinePlayers() as $p) {
 			if($p->canSee($player) && $p->getName() !== $player->getName()) {
